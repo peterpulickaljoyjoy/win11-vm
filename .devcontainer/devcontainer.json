@@ -1,0 +1,12 @@
+{
+    "name": "Windows 11 Cloud PC",
+    "image": "://microsoft.com",
+    "features": {
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+    },
+    "runArgs": [
+        "--privileged"
+    ],
+    "initializeCommand": "docker run -d --name windows11 --privileged -p 8006:8006 dockur/windows",
+    "forwardPorts": [8006]
+}
